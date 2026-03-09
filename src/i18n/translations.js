@@ -1,0 +1,314 @@
+export const translations = {
+  he: {
+    dir: 'rtl',
+    nav: {
+      home: 'בית',
+      services: 'שירותים',
+      projects: 'פרויקטים',
+      about: 'אודות',
+      contact: 'צור קשר',
+      cta: 'התחילו פרויקט',
+    },
+    hero: {
+      headline: 'פתרונות דיגיטליים חכמים לעסקים שרוצים לצמוח',
+      subheadline: 'Dema WebApps בונה אתרים, אפליקציות ותוכן שיווקי לעסקים שרוצים נוכחות דיגיטלית חזקה, מודרנית ומרשימה. אנחנו משלבים עיצוב, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שמקדמים תוצאות אמיתיות.',
+      cta: 'התחילו פרויקט',
+      viewWork: 'צפו בעבודות',
+    },
+    services: {
+      title: 'השירותים שלנו',
+      items: [
+        {
+          title: 'בניית אתרים לעסקים',
+          desc: 'אתרים מודרניים ומותאמים אישית לעסקים שרוצים נוכחות מקצועית וחזקה ברשת.',
+          features: ['עיצוב רספונסיבי', 'חוויית משתמש מודרנית', 'מבנה ידידותי ל-SEO', 'חיבור לדומיין', 'ביצועים מהירים'],
+        },
+        {
+          title: 'דפי נחיתה',
+          desc: 'דפי נחיתה ממוקדי המרה למוצרים, קמפיינים ושירותים עסקיים.',
+          features: ['מסר שיווקי ברור', 'הנעה לפעולה', 'התאמה למובייל', 'מבנה ממוקד תוצאות'],
+        },
+        {
+          title: 'פיתוח אפליקציות ו-Web Apps',
+          desc: 'פיתוח מערכות דיגיטליות מותאמות לעסקים.',
+          features: ['מערכות ניהול', 'לוחות אדמין', 'מערכות הזמנות', 'פלטפורמות מותאמות אישית'],
+        },
+        {
+          title: 'תחזוקת אתרים ועדכונים',
+          desc: 'שירות שוטף לשיפור, תיקון ועדכון אתרים קיימים.',
+          features: ['עדכון תוכן', 'שיפור עיצוב', 'תיקון תקלות', 'אופטימיזציה', 'שיפור ביצועים'],
+        },
+        {
+          title: 'ניהול עמודי אינסטגרם וטיקטוק לעסקים',
+          desc: 'ניהול נוכחות עסקית ברשתות החברתיות בצורה מקצועית ואחידה.',
+          features: ['ניהול עמוד אינסטגרם', 'ניהול עמוד טיקטוק', 'תכנון תוכן', 'התאמת שפה מיתוגית', 'יצירת נראות דיגיטלית חזקה'],
+        },
+        {
+          title: 'עריכת וידאו ותוכן שיווקי',
+          desc: 'יצירת תוכן ויזואלי שיווקי לקידום העסק.',
+          features: ['עריכת סרטונים קצרים', 'Reels לאינסטגרם', 'סרטוני TikTok', 'תוכן פרסומי', 'ויזואליים ממותגים', 'תוכן שמגביר מעורבות'],
+        },
+      ],
+    },
+    whyUs: {
+      title: 'למה Dema WebApps',
+      items: [
+        'עיצוב מודרני ויוקרתי',
+        'פתרונות מותאמים לצרכים עסקיים',
+        'עבודה מהירה ורספונסיבית',
+        'שילוב בין עיצוב, טכנולוגיה ושיווק',
+        'תקשורת ברורה ומקצועית',
+        'מעטפת דיגיטלית מלאה לעסק',
+      ],
+    },
+    projects: {
+      title: 'פרויקטים נבחרים',
+      viewProject: 'צפה בפרויקט',
+      items: [
+        {
+          title: 'Faten Architect',
+          desc: 'אתר תדמית אלגנטי לסטודיו אדריכלות ועיצוב פנים',
+          category: 'אתר תדמית',
+          link: 'https://faten-architect.com/',
+          image: '/projects/faten-architect.jpg',
+        },
+        {
+          title: 'Business Landing Page',
+          desc: 'דף נחיתה שיווקי שמיועד ליצירת לידים',
+          category: 'דף נחיתה',
+          link: '#',
+          image: '/projects/landing.jpg',
+        },
+        {
+          title: 'Custom Business Website',
+          desc: 'אתר עסקי מודרני ורספונסיבי לעסק בצמיחה',
+          category: 'אתר עסקי',
+          link: '#',
+          image: '/projects/business.jpg',
+        },
+      ],
+    },
+    about: {
+      title: 'אודות Dema WebApps',
+      text: 'Dema WebApps היא חברה דיגיטלית המתמחה בבניית אתרים, אפליקציות ותוכן שיווקי לעסקים. המטרה שלנו היא לעזור לעסקים לבנות נוכחות דיגיטלית חזקה באמצעות עיצוב מקצועי, חוויית משתמש חכמה ופיתוח איכותי. אנחנו מאמינים בשילוב בין יצירתיות, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שנראים מצוין ומקדמים צמיחה אמיתית.',
+    },
+    process: {
+      title: 'איך אנחנו עובדים',
+      steps: [
+        { num: '01', title: 'אפיון', desc: 'מבינים את העסק והמטרות' },
+        { num: '02', title: 'תכנון', desc: 'בונים את הפתרון הנכון' },
+        { num: '03', title: 'עיצוב ופיתוח', desc: 'יוצרים את האתר, האפליקציה או התוכן' },
+        { num: '04', title: 'השקה וליווי', desc: 'מעלים לאוויר וממשיכים לשפר' },
+      ],
+    },
+    cta: {
+      title: 'מוכנים להתחיל את הפרויקט הבא שלכם?',
+      text: 'בואו נבנה יחד אתר, אפליקציה או תוכן שיווקי שיעזור לעסק שלכם לבלוט ולצמוח.',
+      button: 'התחילו פרויקט',
+    },
+    contact: {
+      title: 'צרו קשר',
+      fields: {
+        name: 'שם מלא',
+        business: 'שם העסק',
+        email: 'אימייל',
+        phone: 'טלפון',
+        service: 'שירות נדרש',
+        message: 'הודעה',
+      },
+      submit: 'שליחה',
+      email: 'אימייל',
+      instagram: 'אינסטגרם',
+      whatsapp: 'וואטסאפ',
+      phone: 'טלפון',
+    },
+    footer: {
+      tagline: 'פתרונות דיגיטליים חכמים לעסקים שרוצים לצמוח.',
+      copyright: '© 2026 Dema WebApps. כל הזכויות שמורות.',
+    },
+    a11y: {
+      label: 'נגישות',
+      description: 'תמיכה בנגישות',
+    },
+  },
+  ar: {
+    dir: 'rtl',
+    nav: {
+      home: 'الرئيسية',
+      services: 'الخدمات',
+      projects: 'المشاريع',
+      about: 'من نحن',
+      contact: 'تواصل',
+      cta: 'ابدأ مشروعك',
+    },
+    hero: {
+      headline: 'حلول رقمية ذكية لأعمال تريد أن تنمو',
+      subheadline: 'تقوم Dema WebApps ببناء مواقع إلكترونية، تطبيقات، ومحتوى تسويقي للأعمال التي تريد حضورًا رقميًا قويًا، حديثًا واحترافيًا. نحن نجمع بين التصميم، التكنولوجيا، والتفكير التجاري لإنشاء حلول تدعم نموًا حقيقيًا.',
+      cta: 'ابدأ مشروعك',
+      viewWork: 'شاهد أعمالنا',
+    },
+    services: {
+      title: 'خدماتنا',
+      items: [
+        { title: 'تطوير مواقع إلكترونية للأعمال', desc: 'مواقع حديثة ومخصصة للأعمال التي تريد حضورًا مهنيًا قويًا على الإنترنت.', features: [] },
+        { title: 'صفحات هبوط', desc: 'صفحات هبوط مصممة لتحقيق نتائج وتحويلات أفضل.', features: [] },
+        { title: 'تطوير تطبيقات وأنظمة ويب', desc: 'تطوير أنظمة ومنصات رقمية مخصصة للأعمال.', features: [] },
+        { title: 'صيانة المواقع والتحديثات', desc: 'دعم مستمر لتحسين وتحديث المواقع القائمة.', features: [] },
+        { title: 'إدارة صفحات إنستغرام وتيك توك', desc: 'إدارة حضور الأعمال على منصات التواصل الاجتماعي بشكل احترافي.', features: [] },
+        { title: 'مونتاج فيديو ومحتوى تسويقي', desc: 'إنشاء محتوى بصري وتسويقي يساعد الأعمال على النمو والوصول للجمهور.', features: [] },
+      ],
+    },
+    whyUs: {
+      title: 'لماذا Dema WebApps',
+      items: [
+        'تصميم حديث واحترافي',
+        'حلول مخصصة لاحتياجات الأعمال',
+        'تنفيذ سريع ومتجاوب',
+        'دمج بين التصميم والتكنولوجيا والتسويق',
+        'تواصل واضح واحترافي',
+        'خدمات رقمية متكاملة',
+      ],
+    },
+    projects: {
+      title: 'مشاريع مختارة',
+      viewProject: 'عرض المشروع',
+      items: [
+        { title: 'Faten Architect', desc: 'موقع أنيق لاستوديو هندسة معمارية وتصميم داخلي', category: 'موقع تعريفي', link: 'https://faten-architect.com/', image: '/projects/faten-architect.jpg' },
+        { title: 'Business Landing Page', desc: 'صفحة هبوط تسويقية لتحقيق العملاء المحتملين', category: 'صفحة هبوط', link: '#', image: '/projects/landing.jpg' },
+        { title: 'Custom Business Website', desc: 'موقع أعمال حديث ومتجاوب للشركات النامية', category: 'موقع أعمال', link: '#', image: '/projects/business.jpg' },
+      ],
+    },
+    about: {
+      title: 'حول Dema WebApps',
+      text: 'Dema WebApps هي شركة رقمية متخصصة في بناء المواقع، التطبيقات، والمحتوى التسويقي للأعمال. هدفنا هو مساعدة الشركات على بناء حضور رقمي قوي من خلال تصميم احترافي، تجربة مستخدم ذكية، وتطوير موثوق.',
+    },
+    process: {
+      title: 'كيف نعمل',
+      steps: [
+        { num: '01', title: 'اكتشاف الاحتياج', desc: '' },
+        { num: '02', title: 'التخطيط', desc: '' },
+        { num: '03', title: 'التصميم والتنفيذ', desc: '' },
+        { num: '04', title: 'الإطلاق والدعم', desc: '' },
+      ],
+    },
+    cta: {
+      title: 'جاهزون لبدء مشروعكم القادم؟',
+      text: 'لنقم ببناء موقع، تطبيق، أو محتوى تسويقي يساعد عملكم على التميز والنمو.',
+      button: 'ابدأ مشروعك',
+    },
+    contact: {
+      title: 'تواصل معنا',
+      fields: {
+        name: 'الاسم الكامل',
+        business: 'اسم العمل',
+        email: 'البريد الإلكتروني',
+        phone: 'الهاتف',
+        service: 'الخدمة المطلوبة',
+        message: 'الرسالة',
+      },
+      submit: 'إرسال',
+      email: 'البريد',
+      instagram: 'إنستغرام',
+      whatsapp: 'واتساب',
+      phone: 'الهاتف',
+    },
+    footer: {
+      tagline: 'حلول رقمية ذكية لأعمال تريد أن تنمو.',
+      copyright: '© 2026 Dema WebApps. جميع الحقوق محفوظة.',
+    },
+    a11y: {
+      label: 'إمكانية الوصول',
+      description: 'دعم إمكانية الوصول',
+    },
+  },
+  en: {
+    dir: 'ltr',
+    nav: {
+      home: 'Home',
+      services: 'Services',
+      projects: 'Projects',
+      about: 'About',
+      contact: 'Contact',
+      cta: 'Start Your Project',
+    },
+    hero: {
+      headline: 'Smart Digital Solutions for Businesses That Want to Grow',
+      subheadline: 'Dema WebApps builds websites, web applications, and marketing content for businesses that want a strong, modern, and professional digital presence. We combine design, technology, and business thinking to create solutions that drive real growth.',
+      cta: 'Start Your Project',
+      viewWork: 'View Our Work',
+    },
+    services: {
+      title: 'Our Services',
+      items: [
+        { title: 'Business Website Development', desc: 'Modern custom websites for businesses that need a strong online presence.', features: ['Responsive design', 'Modern UX', 'SEO-friendly structure', 'Domain setup', 'Fast performance'] },
+        { title: 'Landing Pages', desc: 'Conversion-focused landing pages for products, campaigns, and services.', features: ['Clear messaging', 'Strong CTAs', 'Mobile-optimized', 'Results-driven'] },
+        { title: 'Web Application Development', desc: 'Custom business systems, dashboards, and digital platforms.', features: ['Management systems', 'Admin panels', 'Booking systems', 'Custom platforms'] },
+        { title: 'Website Maintenance & Updates', desc: 'Ongoing support, fixes, improvements, and optimization.', features: ['Content updates', 'Design improvements', 'Bug fixes', 'Performance optimization'] },
+        { title: 'Instagram & TikTok Management', desc: 'Professional social media management for business accounts.', features: ['Instagram management', 'TikTok management', 'Content planning', 'Brand voice', 'Strong digital presence'] },
+        { title: 'Video Editing & Marketing Content', desc: 'Short-form video editing and branded marketing content for digital growth.', features: ['Short-form video', 'Reels', 'TikTok content', 'Ad creatives', 'Branded visuals', 'Engagement content'] },
+      ],
+    },
+    whyUs: {
+      title: 'Why Dema WebApps',
+      items: [
+        'Modern and premium design',
+        'Business-focused solutions',
+        'Fast and responsive work',
+        'Design, technology, and marketing in one place',
+        'Clear communication',
+        'Complete digital support for growing businesses',
+      ],
+    },
+    projects: {
+      title: 'Selected Projects',
+      viewProject: 'View Project',
+      items: [
+        { title: 'Faten Architect', desc: 'Elegant brand website for an architecture and interior design studio', category: 'Brand Website', link: 'https://faten-architect.com/', image: '/projects/faten-architect.jpg' },
+        { title: 'Business Landing Page', desc: 'Conversion-focused landing page for lead generation', category: 'Landing Page', link: '#', image: '/projects/landing.jpg' },
+        { title: 'Custom Business Website', desc: 'Modern responsive business website for growing companies', category: 'Business Website', link: '#', image: '/projects/business.jpg' },
+      ],
+    },
+    about: {
+      title: 'About Dema WebApps',
+      text: 'Dema WebApps is a digital company focused on building websites, web applications, and marketing content for businesses. Our goal is to help brands build a strong digital presence through premium design, smart user experience, and reliable development.',
+    },
+    process: {
+      title: 'How We Work',
+      steps: [
+        { num: '01', title: 'Discover', desc: 'Understand your business and goals' },
+        { num: '02', title: 'Plan', desc: 'Build the right solution' },
+        { num: '03', title: 'Design & Build', desc: 'Create your site, app, or content' },
+        { num: '04', title: 'Launch & Support', desc: 'Go live and keep improving' },
+      ],
+    },
+    cta: {
+      title: 'Ready to Build Your Next Digital Project?',
+      text: "Let's create a website, app, or content strategy that helps your business stand out and grow.",
+      button: 'Start Your Project',
+    },
+    contact: {
+      title: 'Contact Us',
+      fields: {
+        name: 'Full Name',
+        business: 'Business Name',
+        email: 'Email',
+        phone: 'Phone',
+        service: 'Service Required',
+        message: 'Message',
+      },
+      submit: 'Send',
+      email: 'Email',
+      instagram: 'Instagram',
+      whatsapp: 'WhatsApp',
+      phone: 'Phone',
+    },
+    footer: {
+      tagline: 'Smart digital solutions for businesses that want to grow.',
+      copyright: '© 2026 Dema WebApps. All rights reserved.',
+    },
+    a11y: {
+      label: 'Accessibility',
+      description: 'Accessibility support',
+    },
+  },
+}

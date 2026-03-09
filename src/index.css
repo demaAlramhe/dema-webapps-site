@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-dark-900 text-white antialiased font-sans;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* RTL/LTR safe spacing */
+[dir="rtl"] .ms-auto {
+  margin-inline-start: auto;
+}
+[dir="ltr"] .ms-auto {
+  margin-inline-start: auto;
+}
