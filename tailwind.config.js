@@ -11,24 +11,33 @@ export default {
         display: ['Clash Display', 'Outfit', 'system-ui', 'sans-serif'],
       },
       colors: {
-        brand: {
-          50: '#eef7ff',
-          100: '#d9ecff',
-          200: '#bcdeff',
-          300: '#8ecaff',
-          400: '#59adff',
-          500: '#338cfa',
-          600: '#1d6ef0',
-          700: '#1658dd',
-          800: '#1846b3',
-          900: '#193d8d',
-          950: '#142756',
+        // רקע ראשי מהלוגו
+        page: '#dad7d1',
+        surface: {
+          DEFAULT: '#dad7d1',
+          alt: '#d2cdc6',
+          card: '#e8e5e0',
+          elevated: '#efede9',
         },
-        dark: {
-          900: '#0a0a0f',
-          800: '#12121a',
-          700: '#1a1a24',
-          600: '#24242f',
+        // טקסט: גוונים חומים בלבד (ללא שחור / כחול)
+        ink: {
+          DEFAULT: '#433b35',
+          muted: '#5e564e',
+          subtle: '#7a726a',
+        },
+        // מותג = צבע הכפתורים מהלוגו + גוונים תואמים
+        brand: {
+          50: '#f7f6f4',
+          100: '#ebe8e3',
+          200: '#d9d4cc',
+          300: '#c4bdb2',
+          400: '#8a7f72',
+          500: '#7a6f64',
+          600: '#675d54',
+          700: '#5a5149',
+          800: '#4d4540',
+          900: '#3d3732',
+          950: '#2c2620',
         },
       },
       animation: {
@@ -47,7 +56,11 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-pattern': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(51, 140, 250, 0.15), transparent)',
+        'hero-pattern': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(103, 93, 84, 0.12), transparent)',
+      },
+      /* טבעות פוקוס ברירת מחדל — לא כחול Tailwind */
+      ringColor: {
+        DEFAULT: '#675d54',
       },
     },
   },

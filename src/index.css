@@ -5,9 +5,76 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    accent-color: #675d54;
+    -webkit-tap-highlight-color: rgba(103, 93, 84, 0.12);
   }
+
   body {
-    @apply bg-dark-900 text-white antialiased font-sans;
+    @apply antialiased font-sans;
+    background-color: #dad7d1;
+    color: #433b35;
+  }
+
+  /* פוקוס — חום מותג בלבד */
+  *:focus-visible {
+    outline-color: #675d54;
+  }
+
+  /* קישורים בלי class — חום מותג (לא כחול דפדפן) */
+  a:not([class]) {
+    color: #5a5149;
+    text-decoration: underline;
+    text-decoration-color: rgba(103, 93, 84, 0.35);
+  }
+  a:not([class]):hover {
+    color: #4d4540;
+    text-decoration-color: rgba(103, 93, 84, 0.55);
+  }
+  a:not([class]):visited {
+    color: #5a5149;
+  }
+
+  input,
+  textarea,
+  select {
+    caret-color: #675d54;
+  }
+
+  /* סימון טקסט */
+  ::selection {
+    background-color: rgba(103, 93, 84, 0.22);
+    color: #433b35;
+  }
+
+  /* גלילה — גוונים מהאתר */
+  * {
+    scrollbar-color: #c4bdb2 #dad7d1;
+  }
+  *::-webkit-scrollbar-track {
+    background: #dad7d1;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #c4bdb2;
+    border-radius: 8px;
+    border: 2px solid #dad7d1;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: #a89f94;
+  }
+
+  /* Autofill כרום — בלי רקע כחול */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #433b35;
+    box-shadow: 0 0 0px 1000px #e8e5e0 inset;
+    transition: background-color 99999s ease-out 0s;
   }
 }
 

@@ -7,13 +7,13 @@ export default function Process() {
   const steps = translations[lang].process.steps
 
   return (
-    <section className="py-24 md:py-32 bg-dark-800">
+    <section className="py-24 md:py-32 bg-surface-alt">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
+          className="text-3xl md:text-4xl font-bold text-ink text-center mb-16"
         >
           {t('process.title')}
         </motion.h2>
@@ -30,16 +30,16 @@ export default function Process() {
               className="relative text-center cursor-default"
             >
               {i < steps.length - 1 && (
-                <div className={`hidden lg:block absolute top-12 w-[80%] h-px from-brand-500/50 to-transparent ${translations[lang].dir === 'rtl' ? 'right-[60%] bg-gradient-to-l' : 'left-[60%] bg-gradient-to-r'}`} />
+                <div className={`hidden lg:block absolute top-12 w-[80%] h-px from-brand-600/40 to-transparent ${translations[lang].dir === 'rtl' ? 'right-[60%] bg-gradient-to-l' : 'left-[60%] bg-gradient-to-r'}`} />
               )}
               <motion.div
-                className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-brand-600/20 text-brand-400 text-2xl font-bold mb-4"
+                className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-brand-600/15 text-brand-800 text-2xl font-bold mb-4 border border-brand-600/20"
                 whileHover={{ scale: 1.08, transition: { type: 'spring', stiffness: 300 } }}
               >
                 {step.num}
               </motion.div>
-              <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-              {step.desc && <p className="text-white/70 text-sm">{step.desc}</p>}
+              <h3 className="text-xl font-semibold text-ink mb-2">{step.title}</h3>
+              {step.desc && <p className="text-ink-muted text-sm">{step.desc}</p>}
             </motion.div>
           ))}
         </div>

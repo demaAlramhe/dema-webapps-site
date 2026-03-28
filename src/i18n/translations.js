@@ -8,10 +8,11 @@ export const translations = {
       about: 'אודות',
       contact: 'צור קשר',
       cta: 'התחילו פרויקט',
+      backToTop: 'חזרה למעלה',
     },
     hero: {
       headline: 'פתרונות דיגיטליים חכמים לעסקים שרוצים לצמוח',
-      subheadline: 'Dema WebApps בונה אתרים, אפליקציות ותוכן שיווקי לעסקים שרוצים נוכחות דיגיטלית חזקה, מודרנית ומרשימה. אנחנו משלבים עיצוב, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שמקדמים תוצאות אמיתיות.',
+      subheadline: 'Dema Digital Solutions בונה אתרים, אפליקציות ותוכן שיווקי לעסקים שרוצים נוכחות דיגיטלית חזקה, מודרנית ומרשימה. אנחנו משלבים עיצוב, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שמקדמים תוצאות אמיתיות.',
       cta: 'התחילו פרויקט',
       viewWork: 'צפו בעבודות',
     },
@@ -51,7 +52,7 @@ export const translations = {
       ],
     },
     whyUs: {
-      title: 'למה Dema WebApps',
+      title: 'למה Dema Digital Solutions',
       items: [
         'עיצוב מודרני ויוקרתי',
         'פתרונות מותאמים לצרכים עסקיים',
@@ -84,13 +85,13 @@ export const translations = {
           desc: 'אתר עסקי מודרני ורספונסיבי לעסק בצמיחה',
           category: 'אתר עסקי',
           link: '#',
-          image: '/projects/business.jpg',
+          image: '/projects/business.png',
         },
       ],
     },
     about: {
-      title: 'אודות Dema WebApps',
-      text: 'Dema WebApps היא חברה דיגיטלית המתמחה בבניית אתרים, אפליקציות ותוכן שיווקי לעסקים. המטרה שלנו היא לעזור לעסקים לבנות נוכחות דיגיטלית חזקה באמצעות עיצוב מקצועי, חוויית משתמש חכמה ופיתוח איכותי. אנחנו מאמינים בשילוב בין יצירתיות, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שנראים מצוין ומקדמים צמיחה אמיתית.',
+      title: 'אודות Dema Digital Solutions',
+      text: 'Dema Digital Solutions היא חברה דיגיטלית המתמחה בבניית אתרים, אפליקציות ותוכן שיווקי לעסקים. המטרה שלנו היא לעזור לעסקים לבנות נוכחות דיגיטלית חזקה באמצעות עיצוב מקצועי, חוויית משתמש חכמה ופיתוח איכותי. אנחנו מאמינים בשילוב בין יצירתיות, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שנראים מצוין ומקדמים צמיחה אמיתית.',
     },
     process: {
       title: 'איך אנחנו עובדים',
@@ -124,11 +125,21 @@ export const translations = {
     },
     footer: {
       tagline: 'פתרונות דיגיטליים חכמים לעסקים שרוצים לצמוח.',
-      copyright: '© 2026 Dema WebApps. כל הזכויות שמורות.',
+      copyright: '© 2026 Dema Digital Solutions. כל הזכויות שמורות.',
     },
     a11y: {
       label: 'נגישות',
-      description: 'תמיכה בנגישות',
+      description: 'התאמות תצוגה ונוחות קריאה',
+      textSize: 'גודל טקסט',
+      highContrast: 'ניגודיות גבוהה',
+      reduceMotion: 'הפחתת תנועה',
+      readableSpacing: 'ריווח שורות וקריאות',
+      underlineLinks: 'קישורים מודגשים (קו תחתון)',
+      grayscale: 'תצוגה בשחור־לבן',
+      strongFocus: 'הדגשת מיקוד (מקלדת)',
+      resetAll: 'איפוס הכל',
+      on: 'פעיל',
+      off: 'כבוי',
     },
   },
   ar: {
@@ -140,10 +151,11 @@ export const translations = {
       about: 'من نحن',
       contact: 'تواصل',
       cta: 'ابدأ مشروعك',
+      backToTop: 'العودة للأعلى',
     },
     hero: {
       headline: 'حلول رقمية ذكية لأعمال تريد أن تنمو',
-      subheadline: 'تقوم Dema WebApps ببناء مواقع إلكترونية، تطبيقات، ومحتوى تسويقي للأعمال التي تريد حضورًا رقميًا قويًا، حديثًا واحترافيًا. نحن نجمع بين التصميم، التكنولوجيا، والتفكير التجاري لإنشاء حلول تدعم نموًا حقيقيًا.',
+      subheadline: 'تقوم Dema Digital Solutions ببناء مواقع إلكترونية، تطبيقات، ومحتوى تسويقي للأعمال التي تريد حضورًا رقميًا قويًا، حديثًا واحترافيًا. نحن نجمع بين التصميم، التكنولوجيا، والتفكير التجاري لإنشاء حلول تدعم نموًا حقيقيًا.',
       cta: 'ابدأ مشروعك',
       viewWork: 'شاهد أعمالنا',
     },
@@ -159,7 +171,7 @@ export const translations = {
       ],
     },
     whyUs: {
-      title: 'لماذا Dema WebApps',
+      title: 'لماذا Dema Digital Solutions',
       items: [
         'تصميم حديث واحترافي',
         'حلول مخصصة لاحتياجات الأعمال',
@@ -175,12 +187,12 @@ export const translations = {
       items: [
         { title: 'Faten Architect', desc: 'موقع أنيق لاستوديو هندسة معمارية وتصميم داخلي', category: 'موقع تعريفي', link: 'https://faten-architect.com/', image: '/projects/faten-architect.jpg' },
         { title: 'Business Landing Page', desc: 'صفحة هبوط تسويقية لتحقيق العملاء المحتملين', category: 'صفحة هبوط', link: '#', image: '/projects/landing.jpg' },
-        { title: 'Custom Business Website', desc: 'موقع أعمال حديث ومتجاوب للشركات النامية', category: 'موقع أعمال', link: '#', image: '/projects/business.jpg' },
+        { title: 'Custom Business Website', desc: 'موقع أعمال حديث ومتجاوب للشركات النامية', category: 'موقع أعمال', link: '#', image: '/projects/business.png' },
       ],
     },
     about: {
-      title: 'حول Dema WebApps',
-      text: 'Dema WebApps هي شركة رقمية متخصصة في بناء المواقع، التطبيقات، والمحتوى التسويقي للأعمال. هدفنا هو مساعدة الشركات على بناء حضور رقمي قوي من خلال تصميم احترافي، تجربة مستخدم ذكية، وتطوير موثوق.',
+      title: 'حول Dema Digital Solutions',
+      text: 'Dema Digital Solutions هي شركة رقمية متخصصة في بناء المواقع، التطبيقات، والمحتوى التسويقي للأعمال. هدفنا هو مساعدة الشركات على بناء حضور رقمي قوي من خلال تصميم احترافي، تجربة مستخدم ذكية، وتطوير موثوق.',
     },
     process: {
       title: 'كيف نعمل',
@@ -214,11 +226,21 @@ export const translations = {
     },
     footer: {
       tagline: 'حلول رقمية ذكية لأعمال تريد أن تنمو.',
-      copyright: '© 2026 Dema WebApps. جميع الحقوق محفوظة.',
+      copyright: '© 2026 Dema Digital Solutions. جميع الحقوق محفوظة.',
     },
     a11y: {
       label: 'إمكانية الوصول',
-      description: 'دعم إمكانية الوصول',
+      description: 'ضبط العرض والقراءة',
+      textSize: 'حجم النص',
+      highContrast: 'تباين عالٍ',
+      reduceMotion: 'تقليل الحركة',
+      readableSpacing: 'تباعد الأسطر',
+      underlineLinks: 'تسطير الروابط',
+      grayscale: 'عرض رمادي',
+      strongFocus: 'تمييز التركيز (لوحة مفاتيح)',
+      resetAll: 'إعادة ضبط الكل',
+      on: 'تشغيل',
+      off: 'إيقاف',
     },
   },
   en: {
@@ -230,10 +252,11 @@ export const translations = {
       about: 'About',
       contact: 'Contact',
       cta: 'Start Your Project',
+      backToTop: 'Back to top',
     },
     hero: {
       headline: 'Smart Digital Solutions for Businesses That Want to Grow',
-      subheadline: 'Dema WebApps builds websites, web applications, and marketing content for businesses that want a strong, modern, and professional digital presence. We combine design, technology, and business thinking to create solutions that drive real growth.',
+      subheadline: 'Dema Digital Solutions builds websites, web applications, and marketing content for businesses that want a strong, modern, and professional digital presence. We combine design, technology, and business thinking to create solutions that drive real growth.',
       cta: 'Start Your Project',
       viewWork: 'View Our Work',
     },
@@ -249,7 +272,7 @@ export const translations = {
       ],
     },
     whyUs: {
-      title: 'Why Dema WebApps',
+      title: 'Why Dema Digital Solutions',
       items: [
         'Modern and premium design',
         'Business-focused solutions',
@@ -265,12 +288,12 @@ export const translations = {
       items: [
         { title: 'Faten Architect', desc: 'Elegant brand website for an architecture and interior design studio', category: 'Brand Website', link: 'https://faten-architect.com/', image: '/projects/faten-architect.jpg' },
         { title: 'Business Landing Page', desc: 'Conversion-focused landing page for lead generation', category: 'Landing Page', link: '#', image: '/projects/landing.jpg' },
-        { title: 'Custom Business Website', desc: 'Modern responsive business website for growing companies', category: 'Business Website', link: '#', image: '/projects/business.jpg' },
+        { title: 'Custom Business Website', desc: 'Modern responsive business website for growing companies', category: 'Business Website', link: '#', image: '/projects/business.png' },
       ],
     },
     about: {
-      title: 'About Dema WebApps',
-      text: 'Dema WebApps is a digital company focused on building websites, web applications, and marketing content for businesses. Our goal is to help brands build a strong digital presence through premium design, smart user experience, and reliable development.',
+      title: 'About Dema Digital Solutions',
+      text: 'Dema Digital Solutions is a digital company focused on building websites, web applications, and marketing content for businesses. Our goal is to help brands build a strong digital presence through premium design, smart user experience, and reliable development.',
     },
     process: {
       title: 'How We Work',
@@ -304,11 +327,21 @@ export const translations = {
     },
     footer: {
       tagline: 'Smart digital solutions for businesses that want to grow.',
-      copyright: '© 2026 Dema WebApps. All rights reserved.',
+      copyright: '© 2026 Dema Digital Solutions. All rights reserved.',
     },
     a11y: {
       label: 'Accessibility',
-      description: 'Accessibility support',
+      description: 'Display and reading options',
+      textSize: 'Text size',
+      highContrast: 'High contrast',
+      reduceMotion: 'Reduce motion',
+      readableSpacing: 'Line spacing',
+      underlineLinks: 'Underline links',
+      grayscale: 'Grayscale',
+      strongFocus: 'Strong focus (keyboard)',
+      resetAll: 'Reset all',
+      on: 'On',
+      off: 'Off',
     },
   },
 }

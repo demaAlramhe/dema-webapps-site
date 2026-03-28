@@ -12,8 +12,7 @@
    (או landing.png)
 
 3. Custom Business Website (כרטיס שלישי):
-   שם הקובץ: business.jpg
-   (או business.png)
+   שם הקובץ: business.png
 
 מיקום: public/projects/
 כלומר: demaalramhe → public → projects → הקבצים כאן.

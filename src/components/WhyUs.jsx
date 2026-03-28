@@ -8,13 +8,13 @@ export default function WhyUs() {
   const items = translations[lang].whyUs.items
 
   return (
-    <section className="py-24 md:py-32 bg-dark-900">
+    <section className="py-24 md:py-32 bg-page">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
+          className="text-3xl md:text-4xl font-bold text-ink text-center mb-16"
         >
           {t('whyUs.title')}
         </motion.h2>
@@ -28,16 +28,16 @@ export default function WhyUs() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.06 }}
               whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-              className="flex items-start gap-4 p-4 rounded-xl bg-dark-800/50 border border-white/5 hover:border-white/10 transition-colors cursor-default"
+              className="flex items-start gap-4 p-4 rounded-xl bg-surface-card border border-ink/10 hover:border-brand-600/25 transition-colors cursor-default shadow-sm"
             >
               <motion.span
-                className="w-8 h-8 rounded-lg bg-brand-600/20 flex items-center justify-center shrink-0 mt-0.5"
+                className="w-8 h-8 rounded-lg bg-brand-600/15 flex items-center justify-center shrink-0 mt-0.5"
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: 'spring', stiffness: 400 }}
               >
-                <Check className="w-4 h-4 text-brand-400" />
+                <Check className="w-4 h-4 text-brand-700" />
               </motion.span>
-              <span className="text-white/90 font-medium">{item}</span>
+              <span className="text-ink font-medium">{item}</span>
             </motion.div>
           ))}
         </div>

@@ -9,10 +9,13 @@ import CTA from './components/CTA'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import AccessibilityButton from './components/AccessibilityButton'
+import ScrollProgress from './components/ScrollProgress'
+import BackToTop from './components/BackToTop'
 
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <Header />
       <main>
         <Hero />
@@ -25,6 +28,7 @@ export default function App() {
         <Contact />
         <Footer />
       </main>
+      <BackToTop />
       {/* Circular accessibility button for people with disabilities */}
       <AccessibilityButton />
     </>

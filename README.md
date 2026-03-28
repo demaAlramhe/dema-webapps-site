@@ -1,6 +1,6 @@
-# Dema WebApps – Business Website
+# Dema Digital Solutions – Business Website
 
-Modern, premium, multilingual (Hebrew, Arabic, English) business website for **Dema WebApps**, with RTL/LTR support and an accessibility panel.
+Modern, premium, multilingual (Hebrew, Arabic, English) business website for **Dema Digital Solutions**, with RTL/LTR support and an accessibility panel.
 
 ## Tech stack
 
@@ -25,14 +25,14 @@ npm run preview
 
 ## Logo and assets
 
-- **Logo:** Place your Dema WebApps logo at `public/logo.png`. If missing, the site falls back to `public/logo.svg`.
-- **Projects:** Add project images under `public/projects/` (e.g. `faten-architect.jpg`, `landing.jpg`, `business.jpg`) or leave as-is to use the gradient placeholder.
+- **Logo:** Place your Dema Digital Solutions logo at `public/logo.png`. If missing, the site falls back to `public/logo.svg`.
+- **Projects:** Add project images under `public/projects/` (e.g. `faten-architect.jpg`, `landing.jpg`, `business.png`) or leave as-is to use the gradient placeholder.
 
 ## Contact (already wired)
 
 - **Phone:** 0543223106  
-- **Email:** demaalramhe@gmail.com  
-- **Instagram:** [dema_webapps](https://www.instagram.com/dema_webapps?igsh=MW83cDU0ejZ0NjF2Mg%3D%3D&utm_source=qr)  
+- **Email:** demadigital.business@gmail.com  
+- **Instagram:** [dema.digital.solutions](https://www.instagram.com/dema.digital.solutions?igsh=MW83cDU0ejZ0NjF2Mg%3D%3D&utm_source=qr)  
 - **WhatsApp:** +972543223106  
 
 ## Accessibility
@@ -54,4 +54,4 @@ Language is switched via the header/footer and persisted in `localStorage` (`dem
 
 ## License
 
-© 2026 Dema WebApps. All rights reserved.
+© 2026 Dema Digital Solutions. All rights reserved.
