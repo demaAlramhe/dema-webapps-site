@@ -15,6 +15,7 @@ export const translations = {
       subheadline: 'Dema Digital Solutions בונה אתרים, אפליקציות ותוכן שיווקי לעסקים שרוצים נוכחות דיגיטלית חזקה, מודרנית ומרשימה. אנחנו משלבים עיצוב, טכנולוגיה וחשיבה עסקית כדי ליצור פתרונות שמקדמים תוצאות אמיתיות.',
       cta: 'התחילו פרויקט',
       viewWork: 'צפו בעבודות',
+      scrollHint: 'גלול',
     },
     services: {
       title: 'השירותים שלנו',
@@ -122,6 +123,14 @@ export const translations = {
       instagram: 'אינסטגרם',
       whatsapp: 'וואטסאפ',
       phone: 'טלפון',
+      serviceOptions: [
+        'בניית אתרים',
+        'פיתוח אפליקציות',
+        'ניהול עמודי סושיאל מדיה',
+        'תוכן שיווקי',
+        'סייבר',
+        'אחר',
+      ],
     },
     footer: {
       tagline: 'פתרונות דיגיטליים חכמים לעסקים שרוצים לצמוח.',
@@ -158,6 +167,7 @@ export const translations = {
       subheadline: 'تقوم Dema Digital Solutions ببناء مواقع إلكترونية، تطبيقات، ومحتوى تسويقي للأعمال التي تريد حضورًا رقميًا قويًا، حديثًا واحترافيًا. نحن نجمع بين التصميم، التكنولوجيا، والتفكير التجاري لإنشاء حلول تدعم نموًا حقيقيًا.',
       cta: 'ابدأ مشروعك',
       viewWork: 'شاهد أعمالنا',
+      scrollHint: 'مرّر للأسفل',
     },
     services: {
       title: 'خدماتنا',
@@ -223,6 +233,14 @@ export const translations = {
       instagram: 'إنستغرام',
       whatsapp: 'واتساب',
       phone: 'الهاتف',
+      serviceOptions: [
+        'بناء مواقع إلكترونية',
+        'تطوير تطبيقات',
+        'إدارة صفحات السوشيال ميديا',
+        'محتوى تسويقي',
+        'سايبر',
+        'أخرى',
+      ],
     },
     footer: {
       tagline: 'حلول رقمية ذكية لأعمال تريد أن تنمو.',
@@ -259,6 +277,7 @@ export const translations = {
       subheadline: 'Dema Digital Solutions builds websites, web applications, and marketing content for businesses that want a strong, modern, and professional digital presence. We combine design, technology, and business thinking to create solutions that drive real growth.',
       cta: 'Start Your Project',
       viewWork: 'View Our Work',
+      scrollHint: 'Scroll',
     },
     services: {
       title: 'Our Services',
@@ -324,6 +343,14 @@ export const translations = {
       instagram: 'Instagram',
       whatsapp: 'WhatsApp',
       phone: 'Phone',
+      serviceOptions: [
+        'Website Development',
+        'App Development',
+        'Social Media Management',
+        'Marketing Content',
+        'Cybersecurity',
+        'Other',
+      ],
     },
     footer: {
       tagline: 'Smart digital solutions for businesses that want to grow.',

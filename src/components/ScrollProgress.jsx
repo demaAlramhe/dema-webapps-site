@@ -20,12 +20,12 @@ export default function ScrollProgress() {
 
   return (
     <div
-      className="fixed top-0 inset-x-0 h-[3px] z-[60] pointer-events-none"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[2px]"
       aria-hidden
     >
       <div className="h-full w-full bg-ink/5">
         <div
-          className="h-full w-full bg-gradient-to-r from-brand-600 via-brand-600 to-brand-700 opacity-90"
+          className="h-full w-full bg-gradient-to-r from-brand-600 via-brand-700 to-brand-800 opacity-95 shadow-[0_1px_8px_rgba(103,93,84,0.35)]"
           style={{
             transform: `scaleX(${progress / 100})`,
             transformOrigin: origin,

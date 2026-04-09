@@ -17,7 +17,7 @@ export default function App() {
     <>
       <ScrollProgress />
       <Header />
-      <main>
+      <main className="relative overflow-x-hidden">
         <Hero />
         <Services />
         <WhyUs />

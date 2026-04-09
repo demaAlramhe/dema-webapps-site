@@ -149,7 +149,7 @@ export default function AccessibilityButton() {
               initial={{ opacity: 0, scale: 0.95, y: 8 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 8 }}
-              className="mb-2 p-4 rounded-2xl bg-surface-card border border-ink/15 shadow-xl w-[min(calc(100vw-2rem),20rem)] max-h-[min(85vh,32rem)] overflow-y-auto overscroll-contain"
+              className="mb-2 max-h-[min(85vh,32rem)] w-[min(calc(100vw-2rem),20rem)] overflow-y-auto overscroll-contain rounded-3xl border border-ink/12 bg-surface-card/98 p-5 shadow-2xl shadow-brand-900/10 backdrop-blur-md"
             >
               <p className="text-sm font-medium text-ink mb-3 border-b border-ink/10 pb-2">
                 {t('a11y.description')}
@@ -244,7 +244,7 @@ export default function AccessibilityButton() {
         <motion.button
           type="button"
           onClick={() => setOpen(!open)}
-          className="flex items-center justify-center w-14 h-14 rounded-full bg-brand-600 hover:bg-brand-700 text-white shadow-lg shadow-brand-600/30 transition-all focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 focus:ring-offset-page"
+          className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-600 text-white shadow-card transition-all hover:bg-brand-700 hover:shadow-card-hover focus:outline-none focus:ring-2 focus:ring-brand-600 focus:ring-offset-2 focus:ring-offset-page"
           aria-label={t('a11y.label')}
           aria-expanded={open}
         >

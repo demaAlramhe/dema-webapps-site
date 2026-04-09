@@ -17,24 +17,32 @@ const languages = [
   { code: 'en', label: 'EN' },
 ]
 
+const navLinkClass =
+  'relative text-sm font-medium text-ink-muted transition-colors hover:text-ink after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-center after:scale-x-0 after:bg-brand-600 after:transition-transform hover:after:scale-x-100'
+
 export default function Header() {
   const { lang, setLang, t } = useLanguage()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
     <motion.header
-      initial={{ y: -20, opacity: 0 }}
+      initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-page/90 backdrop-blur-xl border-b border-ink/10"
+      transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+      className="fixed inset-x-0 top-0 z-50 border-b border-white/25 bg-page/75 shadow-soft backdrop-blur-xl backdrop-saturate-150"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <motion.a href="#home" className="flex items-center gap-2 shrink-0" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between md:h-24">
+          <motion.a
+            href="#home"
+            className="flex shrink-0 items-center gap-2"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
             <img
               src="/demalogo/logo.png"
               alt="Dema Digital Solutions"
-              className="h-24 sm:h-28 w-auto object-contain"
+              className="h-[5rem] w-auto object-contain sm:h-[5.5rem] md:h-[6rem]"
               onError={(e) => {
                 e.target.onerror = null
                 e.target.src = '/logo.svg'
@@ -42,28 +50,25 @@ export default function Header() {
             />
           </motion.a>
 
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden items-center gap-9 md:flex" aria-label="Main">
             {navLinks.map(({ key, href }) => (
-              <motion.a
-                key={key}
-                href={href}
-                className="text-sm font-medium text-ink-muted hover:text-ink transition-colors relative"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.97 }}
-              >
+              <motion.a key={key} href={href} className={navLinkClass} whileTap={{ scale: 0.98 }}>
                 {t(`nav.${key}`)}
               </motion.a>
             ))}
           </nav>
 
-          <div className="flex items-center gap-4">
-            <div className="hidden sm:flex items-center gap-1 p-1 rounded-lg bg-surface-card/80 border border-ink/10">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <div className="hidden items-center gap-0.5 rounded-xl border border-ink/10 bg-surface-card/90 p-1 shadow-inner sm:flex">
               {languages.map(({ code, label }) => (
                 <button
                   key={code}
+                  type="button"
                   onClick={() => setLang(code)}
-                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                    lang === code ? 'bg-brand-600 text-white' : 'text-ink-muted hover:text-ink'
+                  className={`rounded-lg px-3 py-1.5 text-sm font-semibold transition-all ${
+                    lang === code
+                      ? 'bg-brand-600 text-white shadow-sm'
+                      : 'text-ink-muted hover:bg-brand-600/10 hover:text-ink'
                   }`}
                 >
                   {label}
@@ -72,8 +77,8 @@ export default function Header() {
             </div>
             <motion.a
               href="#contact"
-              className="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm transition-colors"
-              whileHover={{ scale: 1.05 }}
+              className="hidden rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-card transition-colors hover:bg-brand-700 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-page sm:inline-flex"
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
               {t('nav.cta')}
@@ -81,10 +86,11 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden p-2 text-ink-muted hover:text-ink"
+              className="rounded-xl p-2.5 text-ink-muted transition-colors hover:bg-surface-card hover:text-ink md:hidden"
               aria-label="Menu"
+              aria-expanded={mobileOpen}
             >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -96,25 +102,34 @@ export default function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-ink/10 bg-surface-alt/95 backdrop-blur-xl"
+            transition={{ duration: 0.25 }}
+            className="border-t border-ink/10 bg-surface-alt/98 shadow-card backdrop-blur-xl md:hidden"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="space-y-1 px-4 py-5">
               {navLinks.map(({ key, href }) => (
                 <a
                   key={key}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="block py-2 text-ink hover:text-brand-700 font-medium"
+                  className="block rounded-xl px-3 py-3 font-medium text-ink transition-colors hover:bg-surface-card"
                 >
                   {t(`nav.${key}`)}
                 </a>
               ))}
-              <div className="flex gap-2 pt-2">
+              <div className="flex flex-wrap gap-2 pt-3">
                 {languages.map(({ code, label }) => (
                   <button
                     key={code}
-                    onClick={() => { setLang(code); setMobileOpen(false) }}
-                    className={`px-3 py-1.5 rounded-md text-sm ${lang === code ? 'bg-brand-600 text-white' : 'bg-surface-card text-ink-muted border border-ink/10'}`}
+                    type="button"
+                    onClick={() => {
+                      setLang(code)
+                      setMobileOpen(false)
+                    }}
+                    className={`rounded-lg px-3 py-2 text-sm font-semibold ${
+                      lang === code
+                        ? 'bg-brand-600 text-white'
+                        : 'border border-ink/10 bg-surface-card text-ink-muted'
+                    }`}
                   >
                     {label}
                   </button>
@@ -123,7 +138,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full text-center py-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium"
+                className="mt-2 block w-full rounded-xl bg-brand-600 py-3.5 text-center font-semibold text-white shadow-card hover:bg-brand-700"
               >
                 {t('nav.cta')}
               </a>

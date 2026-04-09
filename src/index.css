@@ -13,6 +13,7 @@
     @apply antialiased font-sans;
     background-color: #dad7d1;
     color: #433b35;
+    text-rendering: optimizeLegibility;
   }
 
   /* פוקוס — חום מותג בלבד */
@@ -81,6 +82,14 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Premium card surface — subtle top highlight */
+  .surface-premium {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 0%, transparent 42%),
+      #e8e5e0;
+    box-shadow: 0 8px 32px -8px rgba(67, 59, 53, 0.1), 0 2px 8px -2px rgba(67, 59, 53, 0.05),
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
   }
 }
 
