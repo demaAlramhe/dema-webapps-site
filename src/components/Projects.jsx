@@ -62,7 +62,7 @@ export default function Projects() {
                     </span>
                   </div>
                 </div>
-                <div className="surface-premium border-t border-ink/10 p-6 md:p-7">
+                <div className="border-t border-ink/10 p-6 md:p-7">
                   <h3 className="text-xl font-bold tracking-tight text-ink">{project.title}</h3>
                   <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-ink-muted">
                     {project.desc}
