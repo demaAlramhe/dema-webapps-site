@@ -82,11 +82,11 @@ export const translations = {
           image: '/projects/landing.jpg',
         },
         {
-          title: 'Custom Business Website',
-          desc: 'אתר עסקי מודרני ורספונסיבי לעסק בצמיחה',
-          category: 'אתר עסקי',
-          link: '#',
-          image: '/projects/business.png',
+          title: 'Shadi Hamam Law Website',
+          desc: 'אתר מקצועי ומודרני למשרד עורכי דין, שנבנה כדי לשדר אמינות, יוקרה ונוכחות דיגיטלית חזקה.',
+          category: 'אתר משרד עורכי דין',
+          link: 'https://shadi-hamam-law-website.vercel.app/',
+          image: '/projects/shadi-hamam-law-website.png',
         },
       ],
     },
@@ -197,7 +197,13 @@ export const translations = {
       items: [
         { title: 'Faten Architect', desc: 'موقع أنيق لاستوديو هندسة معمارية وتصميم داخلي', category: 'موقع تعريفي', link: 'https://faten-architect.com/', image: '/projects/faten-architect.jpg' },
         { title: 'Business Landing Page', desc: 'صفحة هبوط تسويقية لتحقيق العملاء المحتملين', category: 'صفحة هبوط', link: '#', image: '/projects/landing.jpg' },
-        { title: 'Custom Business Website', desc: 'موقع أعمال حديث ومتجاوب للشركات النامية', category: 'موقع أعمال', link: '#', image: '/projects/business.png' },
+        {
+          title: 'Shadi Hamam Law Website',
+          desc: 'موقع احترافي وعصري لمكتب محاماة، صُمم ليعكس المصداقية والفخامة وحضورًا رقميًا قويًا.',
+          category: 'موقع مكتب محاماة',
+          link: 'https://shadi-hamam-law-website.vercel.app/',
+          image: '/projects/shadi-hamam-law-website.png',
+        },
       ],
     },
     about: {
@@ -307,7 +313,13 @@ export const translations = {
       items: [
         { title: 'Faten Architect', desc: 'Elegant brand website for an architecture and interior design studio', category: 'Brand Website', link: 'https://faten-architect.com/', image: '/projects/faten-architect.jpg' },
         { title: 'Business Landing Page', desc: 'Conversion-focused landing page for lead generation', category: 'Landing Page', link: '#', image: '/projects/landing.jpg' },
-        { title: 'Custom Business Website', desc: 'Modern responsive business website for growing companies', category: 'Business Website', link: '#', image: '/projects/business.png' },
+        {
+          title: 'Shadi Hamam Law Website',
+          desc: 'A professional, modern law firm website built to convey trust, prestige, and a strong digital presence.',
+          category: 'Law Firm Website',
+          link: 'https://shadi-hamam-law-website.vercel.app/',
+          image: '/projects/shadi-hamam-law-website.png',
+        },
       ],
     },
     about: {
