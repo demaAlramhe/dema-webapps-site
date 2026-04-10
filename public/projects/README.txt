@@ -4,8 +4,8 @@
 שים כאן את התמונות עם השמות הבאים בדיוק:
 
 1. Faten Architect (כרטיס ראשון):
-   שם הקובץ: faten-architect.jpg
-   (או faten-architect.png)
+   שם הקובץ: faten-architect.png
+   (או faten-architect.jpg)
 
 2. Business Landing Page (כרטיס אמצעי):
    שם הקובץ: landing.jpg

@@ -29,7 +29,7 @@ export default function BackToTop() {
           exit={{ opacity: 0, y: 8, scale: 0.9 }}
           transition={{ duration: 0.2 }}
           onClick={goTop}
-          className="fixed bottom-6 end-6 z-[48] flex h-12 w-12 items-center justify-center rounded-full border border-ink/12 bg-surface-card/95 text-ink shadow-card backdrop-blur-sm transition-colors hover:border-brand-600/40 hover:bg-surface-elevated hover:shadow-card-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-page"
+          className="fixed bottom-6 right-6 z-[48] flex h-12 w-12 items-center justify-center rounded-full border border-ink/12 bg-surface-card/95 text-ink shadow-card backdrop-blur-sm transition-colors hover:border-brand-600/40 hover:bg-surface-elevated hover:shadow-card-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-page"
           aria-label={t('nav.backToTop')}
           title={t('nav.backToTop')}
         >

@@ -100,3 +100,186 @@
 [dir="ltr"] .ms-auto {
   margin-inline-start: auto;
 }
+
+/* ——— Accessibility toolbar (classes toggled on <html>) ——— */
+
+html.a11y-readable-font body {
+  font-family: 'Lexend', 'Segoe UI', system-ui, sans-serif !important;
+}
+
+html.high-contrast body {
+  background: #2c2620 !important;
+  color: #ebe8e3 !important;
+}
+html.high-contrast a:not([class*='bg-brand-600']) {
+  text-decoration: underline;
+}
+html.high-contrast [class*='border-ink'] {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+html.a11y-light {
+  color-scheme: only light;
+}
+html.a11y-light body {
+  background-color: #dad7d1 !important;
+  color: #433b35 !important;
+}
+
+html.a11y-dark {
+  color-scheme: dark;
+}
+html.a11y-dark body {
+  background-color: #1c1917 !important;
+  color: #e7e5e4 !important;
+}
+html.a11y-dark [class*='bg-page'],
+html.a11y-dark [class*='bg-mesh'],
+html.a11y-dark [class*='bg-hero'] {
+  background-color: #1c1917 !important;
+}
+html.a11y-dark [class*='bg-surface-alt'],
+html.a11y-dark [class*='from-page'],
+html.a11y-dark [class*='to-surface-alt'] {
+  background-color: #292524 !important;
+  --tw-gradient-from: #292524 !important;
+  --tw-gradient-to: #292524 !important;
+}
+html.a11y-dark [class*='bg-surface-card'],
+html.a11y-dark [class*='bg-surface-elevated'],
+html.a11y-dark [class*='bg-page/'] {
+  background-color: rgba(41, 37, 36, 0.92) !important;
+}
+html.a11y-dark .text-ink {
+  color: #e7e5e4 !important;
+}
+html.a11y-dark .text-ink-muted {
+  color: #a8a29e !important;
+}
+html.a11y-dark .text-ink-subtle {
+  color: #78716c !important;
+}
+html.a11y-dark [class*='border-ink'] {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+html.a11y-dark [class*='ring-offset-page'],
+html.a11y-dark [class*='ring-offset-surface-card'] {
+  --tw-ring-offset-color: #1c1917 !important;
+}
+html.a11y-dark input,
+html.a11y-dark textarea,
+html.a11y-dark select {
+  background-color: rgba(28, 25, 23, 0.85) !important;
+  color: #e7e5e4 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+html.a11y-dark ::placeholder {
+  color: #78716c !important;
+}
+html.a11y-dark ::selection {
+  background-color: rgba(103, 93, 84, 0.45);
+  color: #fafaf9;
+}
+html.a11y-dark * {
+  scrollbar-color: #57534e #1c1917;
+}
+html.a11y-dark *::-webkit-scrollbar-track {
+  background: #1c1917;
+}
+html.a11y-dark *::-webkit-scrollbar-thumb {
+  background-color: #57534e;
+  border-color: #1c1917;
+}
+
+html.a11y-reduce-motion *,
+html.a11y-reduce-motion *::before,
+html.a11y-reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+html.a11y-spacing body {
+  line-height: 1.75 !important;
+}
+html.a11y-spacing body p,
+html.a11y-spacing body li,
+html.a11y-spacing body h1,
+html.a11y-spacing body h2,
+html.a11y-spacing body h3 {
+  line-height: 1.75 !important;
+}
+html.a11y-spacing body p {
+  margin-bottom: 0.85em !important;
+}
+
+html.a11y-underline-links a:not([class*='bg-brand-600']) {
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+html.a11y-underline-links a.bg-brand-600,
+html.a11y-underline-links button {
+  text-decoration: none !important;
+}
+
+html.a11y-grayscale {
+  filter: grayscale(1);
+}
+
+html.a11y-strong-focus *:focus-visible {
+  outline: 3px solid #675d54 !important;
+  outline-offset: 4px !important;
+}
+
+html.a11y-highlight-links a:not([class*='bg-brand-600']) {
+  background-color: rgba(250, 204, 21, 0.38) !important;
+  box-decoration-break: clone;
+  border-radius: 0.125rem;
+  padding-inline: 0.1em;
+}
+
+html.a11y-highlight-headings h1,
+html.a11y-highlight-headings h2,
+html.a11y-highlight-headings h3,
+html.a11y-highlight-headings h4 {
+  outline: 2px solid rgba(202, 138, 4, 0.95);
+  outline-offset: 4px;
+  border-radius: 0.25rem;
+}
+
+html.a11y-large-cursor,
+html.a11y-large-cursor button,
+html.a11y-large-cursor a,
+html.a11y-large-cursor input,
+html.a11y-large-cursor textarea,
+html.a11y-large-cursor label {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='12' fill='%23675d54' opacity='0.28'/%3E%3Ccircle cx='18' cy='18' r='3.5' fill='%23433b35'/%3E%3C/svg%3E")
+      18 18,
+    auto !important;
+}
+
+html.a11y-text-align-start main h1,
+html.a11y-text-align-start main h2,
+html.a11y-text-align-start main h3,
+html.a11y-text-align-start main h4,
+html.a11y-text-align-start main p,
+html.a11y-text-align-start main li {
+  text-align: start !important;
+}
+html.a11y-text-align-center main h1,
+html.a11y-text-align-center main h2,
+html.a11y-text-align-center main h3,
+html.a11y-text-align-center main h4,
+html.a11y-text-align-center main p,
+html.a11y-text-align-center main li {
+  text-align: center !important;
+}
+html.a11y-text-align-end main h1,
+html.a11y-text-align-end main h2,
+html.a11y-text-align-end main h3,
+html.a11y-text-align-end main h4,
+html.a11y-text-align-end main p,
+html.a11y-text-align-end main li {
+  text-align: end !important;
+}
