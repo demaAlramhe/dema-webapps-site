@@ -7,9 +7,8 @@
    שם הקובץ: faten-architect.png
    (או faten-architect.jpg)
 
-2. Business Landing Page (כרטיס אמצעי):
-   שם הקובץ: landing.jpg
-   (או landing.png)
+2. Rouh by Aseel Omar (כרטיס אמצעי):
+   שם הקובץ: aseelOmar.png
 
 3. Custom Business Website (כרטיס שלישי):
    שם הקובץ: business.png

@@ -11,6 +11,7 @@ import Footer from './components/Footer'
 import AccessibilityButton from './components/AccessibilityButton'
 import ScrollProgress from './components/ScrollProgress'
 import BackToTop from './components/BackToTop'
+import { SectionFloatingDecor } from './components/FloatingDecor3D'
 
 export default function App() {
   return (
@@ -19,12 +20,19 @@ export default function App() {
       <Header />
       <main className="relative overflow-x-hidden">
         <Hero />
+        <SectionFloatingDecor variant={0} />
         <Services />
+        <SectionFloatingDecor variant={1} />
         <WhyUs />
+        <SectionFloatingDecor variant={2} />
         <Projects />
+        <SectionFloatingDecor variant={3} />
         <About />
+        <SectionFloatingDecor variant={4} />
         <Process />
+        <SectionFloatingDecor variant={5} />
         <CTA />
+        <SectionFloatingDecor variant={6} />
         <Contact />
         <Footer />
       </main>

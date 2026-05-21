@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../context/LanguageContext'
+import AmbientBackground from './AmbientBackground'
+import { Reveal, useMotionSafe } from './motion/Reveal'
+import { hoverTap } from '../lib/hover'
 
 const navLinks = [
   { key: 'home', href: '#home' },
@@ -17,34 +20,39 @@ const languages = [
 
 export default function Footer() {
   const { lang, setLang, t, dir } = useLanguage()
+  const motionSafe = useMotionSafe()
 
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.45 }}
-      className="border-t border-ink/10 bg-page/95"
+    <Reveal
+      as={motion.footer}
+      variant="fade"
+      className="relative overflow-hidden border-t border-ink/8 bg-page/98 backdrop-blur-sm"
       dir={dir}
     >
-      {/* subtle top highlight — matches premium cards elsewhere */}
-      <div
-        className="h-px w-full bg-gradient-to-r from-transparent via-brand-600/20 to-transparent"
-        aria-hidden
-      />
+      <AmbientBackground variant="page" intensity="soft" />
 
-      <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6 md:py-20 lg:px-8 lg:py-24">
+      {/* Top accent line + soft glow */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-[1]" aria-hidden>
+        <div className="footer-glow-top h-px w-full" />
+        <div className="mx-auto h-10 max-w-3xl bg-gradient-to-b from-brand-600/10 via-brand-600/4 to-transparent blur-sm" />
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 top-1/2 z-0 -translate-y-1/2" aria-hidden>
+        <div className="mx-auto h-32 w-[min(100%,22rem)] rounded-full bg-brand-600/[0.06] blur-3xl sm:h-36 sm:w-[26rem]" />
+      </div>
+
+      <div className="relative z-[1] mx-auto max-w-3xl px-4 py-8 sm:px-6 sm:py-9 md:py-10">
         <div className="flex flex-col items-center text-center">
           <motion.a
             href="#home"
-            className="inline-block"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="inline-block shrink-0"
+            whileHover={motionSafe ? {} : { scale: 1.02 }}
+            whileTap={motionSafe ? {} : hoverTap}
           >
             <img
               src="/demalogo/logo.png"
               alt="Dema Digital Solutions"
-              className="h-20 w-auto object-contain sm:h-24 md:h-28"
+              className="h-12 w-auto object-contain sm:h-14 md:h-[3.75rem]"
               onError={(e) => {
                 e.target.onerror = null
                 e.target.src = '/logo.svg'
@@ -52,35 +60,35 @@ export default function Footer() {
             />
           </motion.a>
 
-          <p className="mt-5 max-w-md text-pretty text-sm leading-relaxed text-ink-muted md:text-[0.9375rem]">
+          <p className="mt-2.5 max-w-sm text-pretty text-xs leading-snug text-ink-muted sm:max-w-md sm:text-sm sm:leading-relaxed">
             {t('footer.tagline')}
           </p>
 
           <nav
-            className="mt-10 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3 sm:gap-x-10"
+            className="mt-5 flex max-w-xl flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-7"
             aria-label="Footer"
           >
             {navLinks.map(({ key, href }) => (
               <motion.a
                 key={key}
                 href={href}
-                className="text-sm font-semibold text-ink-muted transition-colors hover:text-brand-800"
-                whileHover={{ y: -1 }}
-                transition={{ duration: 0.15 }}
+                className="footer-link"
+                whileHover={motionSafe ? {} : { y: -1 }}
+                transition={{ duration: 0.22 }}
               >
                 {t(`nav.${key}`)}
               </motion.a>
             ))}
           </nav>
 
-          <div className="mt-9 flex justify-center">
-            <div className="inline-flex items-center gap-0.5 rounded-xl border border-ink/10 bg-surface-card/90 p-1 shadow-soft">
+          <div className="mt-4">
+            <div className="glass-pill inline-flex items-center gap-0.5 rounded-xl p-0.5">
               {languages.map(({ code, label }) => (
                 <button
                   key={code}
                   type="button"
                   onClick={() => setLang(code)}
-                  className={`rounded-lg px-3.5 py-2 text-sm font-semibold transition-all ${
+                  className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-all duration-300 ease-out-expo sm:px-3.5 sm:text-sm ${
                     lang === code
                       ? 'bg-brand-600 text-white shadow-sm'
                       : 'text-ink-muted hover:bg-brand-600/10 hover:text-ink'
@@ -93,10 +101,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-14 border-t border-ink/10 pt-8 text-center text-sm text-ink-subtle">
+        <p className="mt-6 border-t border-ink/10 pt-4 text-center text-xs text-ink-subtle sm:mt-7 sm:pt-5 sm:text-sm">
           {t('footer.copyright')}
         </p>
       </div>
-    </motion.footer>
+    </Reveal>
   )
 }

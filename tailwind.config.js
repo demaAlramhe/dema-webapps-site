@@ -55,6 +55,12 @@ export default {
         'slide-up': 'slideUp 0.6s ease-out forwards',
         'float-slow': 'floatSlow 10s ease-in-out infinite',
         'pulse-soft': 'pulseSoft 6s ease-in-out infinite',
+        'mesh-shift': 'meshShift 20s ease-in-out infinite',
+        'gradient-shift': 'gradientShift 24s ease-in-out infinite',
+        'glow-drift': 'glowDrift 16s ease-in-out infinite',
+        'glow-drift-slow': 'glowDrift 22s ease-in-out infinite alternate',
+        'hero-grid-drift': 'heroGridDrift 48s linear infinite',
+        'hero-grid-pulse': 'heroGridPulse 10s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -73,6 +79,31 @@ export default {
           '0%, 100%': { opacity: '0.35' },
           '50%': { opacity: '0.55' },
         },
+        meshShift: {
+          '0%, 100%': { opacity: '0.6', transform: 'translate(0, 0) scale(1)' },
+          '33%': { opacity: '0.85', transform: 'translate(1.5%, 0.5%) scale(1.015)' },
+          '66%': { opacity: '0.7', transform: 'translate(-1%, -1%) scale(1.01)' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 40%' },
+          '50%': { backgroundPosition: '100% 60%' },
+        },
+        glowDrift: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.85' },
+          '50%': { transform: 'translate(2.5%, -3%) scale(1.06)', opacity: '1' },
+        },
+        heroGridDrift: {
+          '0%': { backgroundPosition: '0px 0px, 0px 0px' },
+          '100%': { backgroundPosition: '56px 56px, 56px 56px' },
+        },
+        heroGridPulse: {
+          '0%, 100%': { opacity: '0.14' },
+          '50%': { opacity: '0.22' },
+        },
+      },
+      backgroundSize: {
+        'ambient-mesh-size': '100% 100%',
+        'ambient-aurora-size': '220% 220%',
       },
       transitionTimingFunction: {
         'out-expo': 'cubic-bezier(0.16, 1, 0.3, 1)',
@@ -82,6 +113,10 @@ export default {
         'hero-pattern': 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(103, 93, 84, 0.12), transparent)',
         'mesh-warm':
           'radial-gradient(at 40% 20%, rgba(103, 93, 84, 0.09) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(138, 127, 114, 0.08) 0px, transparent 45%), radial-gradient(at 0% 50%, rgba(103, 93, 84, 0.06) 0px, transparent 50%)',
+        'ambient-mesh':
+          'radial-gradient(at 30% 25%, rgba(103, 93, 84, 0.1) 0px, transparent 42%), radial-gradient(at 75% 15%, rgba(138, 127, 114, 0.09) 0px, transparent 40%), radial-gradient(at 15% 70%, rgba(103, 93, 84, 0.07) 0px, transparent 48%), radial-gradient(at 85% 75%, rgba(122, 111, 100, 0.06) 0px, transparent 45%)',
+        'ambient-aurora':
+          'linear-gradient(125deg, rgba(103, 93, 84, 0.07) 0%, transparent 28%, rgba(235, 232, 227, 0.15) 42%, transparent 58%, rgba(138, 127, 114, 0.08) 72%, transparent 88%, rgba(103, 93, 84, 0.05) 100%)',
         'shine-edge':
           'linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 45%, transparent 100%)',
       },

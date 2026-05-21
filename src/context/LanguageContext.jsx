@@ -7,7 +7,7 @@ export function LanguageProvider({ children }) {
   const [lang, setLang] = useState(() => {
     const saved = localStorage.getItem('dema-lang')
     if (saved && translations[saved]) return saved
-    return 'he'
+    return 'ar'
   })
 
   useEffect(() => {

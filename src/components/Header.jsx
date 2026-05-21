@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
+import { useMotionSafe } from './motion/Reveal'
+import { hoverButtonPrimary, hoverTap } from '../lib/hover'
 
 const navLinks = [
   { key: 'home', href: '#home' },
@@ -23,13 +25,14 @@ const navLinkClass =
 export default function Header() {
   const { lang, setLang, t } = useLanguage()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const motionSafe = useMotionSafe()
 
   return (
     <motion.header
       initial={{ y: -16, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-x-0 top-0 z-50 border-b border-white/25 bg-page/75 shadow-soft backdrop-blur-xl backdrop-saturate-150"
+      className="glass-nav fixed inset-x-0 top-0 z-50"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between md:h-24">
@@ -59,7 +62,7 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-3 sm:gap-4">
-            <div className="hidden items-center gap-0.5 rounded-xl border border-ink/10 bg-surface-card/90 p-1 shadow-inner sm:flex">
+            <div className="glass-pill hidden items-center gap-0.5 rounded-xl p-1 sm:flex">
               {languages.map(({ code, label }) => (
                 <button
                   key={code}
@@ -77,16 +80,16 @@ export default function Header() {
             </div>
             <motion.a
               href="#contact"
-              className="hidden rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-card transition-colors hover:bg-brand-700 hover:shadow-card-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-page sm:inline-flex"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
+              className="btn-premium-primary hidden rounded-xl bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-card focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 focus-visible:ring-offset-page sm:inline-flex"
+              whileHover={motionSafe ? {} : hoverButtonPrimary}
+              whileTap={motionSafe ? {} : hoverTap}
             >
               {t('nav.cta')}
             </motion.a>
             <button
               type="button"
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="rounded-xl p-2.5 text-ink-muted transition-colors hover:bg-surface-card hover:text-ink md:hidden"
+              className="glass-pill rounded-xl p-2.5 text-ink-muted transition-colors hover:text-ink md:hidden"
               aria-label="Menu"
               aria-expanded={mobileOpen}
             >
@@ -103,7 +106,7 @@ export default function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="border-t border-ink/10 bg-surface-alt/98 shadow-card backdrop-blur-xl md:hidden"
+            className="glass-nav-sheet md:hidden"
           >
             <div className="space-y-1 px-4 py-5">
               {navLinks.map(({ key, href }) => (
@@ -111,7 +114,7 @@ export default function Header() {
                   key={key}
                   href={href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-xl px-3 py-3 font-medium text-ink transition-colors hover:bg-surface-card"
+                  className="block rounded-xl px-3 py-3 font-medium text-ink transition-colors hover:bg-white/25"
                 >
                   {t(`nav.${key}`)}
                 </a>
@@ -128,7 +131,7 @@ export default function Header() {
                     className={`rounded-lg px-3 py-2 text-sm font-semibold ${
                       lang === code
                         ? 'bg-brand-600 text-white'
-                        : 'border border-ink/10 bg-surface-card text-ink-muted'
+                        : 'glass-pill text-ink-muted'
                     }`}
                   >
                     {label}
@@ -138,7 +141,7 @@ export default function Header() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="mt-2 block w-full rounded-xl bg-brand-600 py-3.5 text-center font-semibold text-white shadow-card hover:bg-brand-700"
+                className="btn-premium-primary mt-2 block w-full rounded-xl bg-brand-600 py-3.5 text-center font-semibold text-white shadow-card"
               >
                 {t('nav.cta')}
               </a>

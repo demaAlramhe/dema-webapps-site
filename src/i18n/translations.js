@@ -64,7 +64,7 @@ export const translations = {
       ],
     },
     projects: {
-      title: 'פרויקטים נבחרים',
+      title: 'מהעבודות שלנו',
       viewProject: 'צפה בפרויקט',
       items: [
         {
@@ -75,11 +75,11 @@ export const translations = {
           image: '/projects/faten-architect.png',
         },
         {
-          title: 'Business Landing Page',
-          desc: 'דף נחיתה שיווקי שמיועד ליצירת לידים',
-          category: 'דף נחיתה',
-          link: '#',
-          image: '/projects/landing.jpg',
+          title: 'Rouh by Aseel Omar',
+          desc: 'אתר רגוע ואלגנטי למותג בתחום הריפוי בצלילים והוולנס, שנבנה כדי ליצור נוכחות דיגיטלית רכה, רוחנית ומקצועית.',
+          category: 'אתר וולנס',
+          link: 'https://rouhaseel.com/',
+          image: '/projects/aseelOmar.png',
         },
         {
           title: 'Shadi Hamam Law Website',
@@ -214,11 +214,17 @@ export const translations = {
       ],
     },
     projects: {
-      title: 'مشاريع مختارة',
+      title: 'من أعمالنا',
       viewProject: 'عرض المشروع',
       items: [
         { title: 'Faten Architect', desc: 'موقع أنيق لاستوديو هندسة معمارية وتصميم داخلي', category: 'موقع تعريفي', link: 'https://faten-architect.com/', image: '/projects/faten-architect.png' },
-        { title: 'Business Landing Page', desc: 'صفحة هبوط تسويقية لتحقيق العملاء المحتملين', category: 'صفحة هبوط', link: '#', image: '/projects/landing.jpg' },
+        {
+          title: 'Rouh by Aseel Omar',
+          desc: 'موقع هادئ وأنيق لعلامة تعمل في مجال العلاج بالصوت والرفاهية، صُمم ليعكس حضورًا رقميًا ناعمًا، روحانيًا واحترافيًا.',
+          category: 'موقع عافية',
+          link: 'https://rouhaseel.com/',
+          image: '/projects/aseelOmar.png',
+        },
         {
           title: 'Shadi Hamam Law Website',
           desc: 'موقع احترافي وعصري لمكتب محاماة، صُمم ليعكس المصداقية والفخامة وحضورًا رقميًا قويًا.',
@@ -352,11 +358,17 @@ export const translations = {
       ],
     },
     projects: {
-      title: 'Selected Projects',
+      title: 'From Our Work',
       viewProject: 'View Project',
       items: [
         { title: 'Faten Architect', desc: 'Elegant brand website for an architecture and interior design studio', category: 'Brand Website', link: 'https://faten-architect.com/', image: '/projects/faten-architect.png' },
-        { title: 'Business Landing Page', desc: 'Conversion-focused landing page for lead generation', category: 'Landing Page', link: '#', image: '/projects/landing.jpg' },
+        {
+          title: 'Rouh by Aseel Omar',
+          desc: 'A calming and elegant website for a sound healing and wellness brand, designed to create a soft, spiritual, and professional digital presence.',
+          category: 'WELLNESS WEBSITE',
+          link: 'https://rouhaseel.com/',
+          image: '/projects/aseelOmar.png',
+        },
         {
           title: 'Shadi Hamam Law Website',
           desc: 'A professional, modern law firm website built to convey trust, prestige, and a strong digital presence.',

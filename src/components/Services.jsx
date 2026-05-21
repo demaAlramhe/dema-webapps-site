@@ -3,52 +3,49 @@ import { Globe, Layout, Code2, Wrench, Share2, Video } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../i18n/translations'
 import SectionHeading from './SectionHeading'
+import AmbientBackground from './AmbientBackground'
+import { Reveal, Stagger, StaggerItem, useMotionSafe } from './motion/Reveal'
+import { hoverLift, hoverIconPop, hoverTap } from '../lib/hover'
 
 const icons = [Globe, Layout, Code2, Wrench, Share2, Video]
 
 export default function Services() {
   const { lang, t } = useLanguage()
   const items = translations[lang].services.items
+  const motionSafe = useMotionSafe()
 
   return (
     <section id="services" className="relative overflow-hidden bg-surface-alt py-28 md:py-36">
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_100%_60%_at_50%_-10%,rgba(103,93,84,0.07),transparent)]"
-        aria-hidden
-      />
+      <AmbientBackground variant="alt" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-40px' }}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        >
+        <Reveal variant="heading">
           <SectionHeading>{t('services.title')}</SectionHeading>
-        </motion.div>
+        </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <Stagger className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8" stagger={0.1} delayChildren={0.06}>
           {items.map((item, i) => {
             const Icon = icons[i] || Globe
             const num = String(i + 1).padStart(2, '0')
             return (
-              <motion.article
+              <StaggerItem
                 key={i}
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-20px' }}
-                transition={{ delay: i * 0.06, duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                whileHover={{ y: -6, transition: { duration: 0.25, ease: [0.16, 1, 0.3, 1] } }}
-                className="group relative cursor-default overflow-hidden rounded-2xl border border-ink/10 bg-gradient-to-b from-surface-elevated/90 to-surface-card/95 p-6 shadow-card transition-shadow duration-300 hover:border-brand-600/30 hover:shadow-card-hover md:p-8"
+                as={motion.article}
+                whileHover={motionSafe ? {} : hoverLift()}
+                whileTap={motionSafe ? {} : hoverTap}
+                className="glass-card glass-interactive hover-card-ring group relative cursor-default overflow-hidden rounded-2xl p-6 md:p-8"
               >
                 <div
-                  className="pointer-events-none absolute inset-0 bg-shine-edge opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                  className="pointer-events-none absolute inset-0 bg-shine-edge opacity-0 transition-opacity duration-400 ease-out-expo group-hover:opacity-100"
+                  aria-hidden
+                />
+                <div
+                  className="pointer-events-none absolute -end-6 -top-6 h-28 w-28 rounded-full bg-brand-600/15 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   aria-hidden
                 />
                 <div className="relative flex items-start justify-between gap-4">
                   <motion.div
-                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-brand-600/15 bg-brand-600/10 text-brand-800 shadow-inner-light transition-colors duration-300 group-hover:border-brand-600/30 group-hover:bg-brand-600/18"
-                    whileHover={{ rotate: [0, -6, 6, 0] }}
-                    transition={{ duration: 0.45 }}
+                    className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-brand-600/15 bg-brand-600/10 text-brand-800 shadow-inner-light transition-[transform,border-color,background-color,box-shadow] duration-300 ease-out-expo group-hover:border-brand-600/30 group-hover:bg-brand-600/18 group-hover:shadow-soft"
+                    whileHover={motionSafe ? {} : hoverIconPop}
                   >
                     <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </motion.div>
@@ -78,10 +75,10 @@ export default function Services() {
                     ))}
                   </ul>
                 )}
-              </motion.article>
+              </StaggerItem>
             )
           })}
-        </div>
+        </Stagger>
       </div>
     </section>
   )
