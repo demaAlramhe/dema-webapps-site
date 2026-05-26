@@ -168,6 +168,17 @@ export default function Hero() {
             <ScrollIndicator reduceMotion={reduceMotion} label={t('hero.scrollHint')} />
           </motion.div>
         )}
+
+        {isArabic && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.85 }}
+            className="mt-10 flex justify-center pb-6 sm:mt-12 sm:pb-8 md:hidden"
+          >
+            <ScrollIndicator reduceMotion={reduceMotion} label={t('hero.scrollHint')} />
+          </motion.div>
+        )}
       </div>
 
       {isArabic && (
@@ -175,7 +186,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.85 }}
-          className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
+          className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 md:block"
         >
           <ScrollIndicator reduceMotion={reduceMotion} label={t('hero.scrollHint')} />
         </motion.div>
