@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Globe, Play, Shield, Smartphone } from 'lucide-react'
+import { Globe, Shield, Smartphone } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { HeroFloating3D } from './FloatingDecor3D'
 import { EASE_OUT_EXPO } from '../lib/motion'
@@ -24,8 +24,7 @@ function ScrollIndicator({ reduceMotion, label }) {
 }
 
 export default function Hero() {
-  const { t, dir, lang } = useLanguage()
-  const isRtl = dir === 'rtl'
+  const { t, lang } = useLanguage()
   const isArabic = lang === 'ar'
   const reduceMotion = useReducedMotion()
 
@@ -143,9 +142,6 @@ export default function Hero() {
             whileTap={reduceMotion ? {} : hoverTap}
           >
             {t('hero.cta')}
-            <ArrowRight
-              className={`h-5 w-5 transition-transform group-hover:translate-x-0.5 ${isRtl ? 'rotate-180' : ''}`}
-            />
           </motion.a>
           <motion.a
             href="#projects"
@@ -153,7 +149,6 @@ export default function Hero() {
             whileHover={reduceMotion ? {} : hoverButtonSecondary}
             whileTap={reduceMotion ? {} : hoverTap}
           >
-            <Play className="h-5 w-5 text-brand-700" strokeWidth={2} />
             {t('hero.viewWork')}
           </motion.a>
         </motion.div>
